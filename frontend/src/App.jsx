@@ -6,7 +6,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import DashboardLayout from './layouts/DashboardLayout';
 import Dashboard from './pages/Dashboard';
-import ProjectsPlaceholder from './pages/ProjectsPlaceholder';
+import Projects from './pages/Projects';
 import TasksPlaceholder from './pages/TasksPlaceholder';
 import ProfilePlaceholder from './pages/ProfilePlaceholder';
 import SettingsPlaceholder from './pages/SettingsPlaceholder';
@@ -31,7 +31,7 @@ function App() {
             }
           >
             <Route index element={<Dashboard />} />
-            <Route path="projects" element={<ProjectsPlaceholder />} />
+            <Route path="projects" element={<Projects />} />
             <Route path="tasks" element={<TasksPlaceholder />} />
             <Route path="profile" element={<ProfilePlaceholder />} />
             <Route path="settings" element={<SettingsPlaceholder />} />
