@@ -134,8 +134,8 @@ function DashboardLayout() {
         <div className="p-4 border-t border-slate-100 dark:border-slate-800/80 space-y-2">
           {!isCollapsed && (
             <div className="flex items-center gap-3 px-2 py-1.5">
-              <div className="w-10 h-10 rounded-xl bg-primary-100 dark:bg-primary-950/40 text-primary-600 dark:text-primary-400 font-display font-extrabold flex items-center justify-center border border-primary-200/20">
-                {user?.name ? user.name.charAt(0).toUpperCase() : 'U'}
+              <div className="w-10 h-10 rounded-xl bg-primary-100 dark:bg-primary-950/40 text-primary-600 dark:text-primary-400 font-display font-extrabold flex items-center justify-center border border-primary-200/20 text-lg">
+                {user?.avatar ? user.avatar : (user?.name ? user.name.charAt(0).toUpperCase() : 'U')}
               </div>
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-semibold text-slate-800 dark:text-slate-200 truncate">
@@ -206,8 +206,8 @@ function DashboardLayout() {
 
             <div className="pt-6 border-t border-slate-100 dark:border-slate-800 space-y-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-primary-100 dark:bg-primary-950/40 text-primary-600 dark:text-primary-400 font-display font-extrabold flex items-center justify-center">
-                  {user?.name ? user.name.charAt(0).toUpperCase() : 'U'}
+                <div className="w-10 h-10 rounded-xl bg-primary-100 dark:bg-primary-950/40 text-primary-600 dark:text-primary-400 font-display font-extrabold flex items-center justify-center text-lg">
+                  {user?.avatar ? user.avatar : (user?.name ? user.name.charAt(0).toUpperCase() : 'U')}
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">

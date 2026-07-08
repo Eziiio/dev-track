@@ -8,8 +8,8 @@ import DashboardLayout from './layouts/DashboardLayout';
 import Dashboard from './pages/Dashboard';
 import Projects from './pages/Projects';
 import Tasks from './pages/Tasks';
-import ProfilePlaceholder from './pages/ProfilePlaceholder';
-import SettingsPlaceholder from './pages/SettingsPlaceholder';
+import Profile from './pages/Profile';
+import Settings from './pages/Settings';
 import { Toaster } from 'react-hot-toast';
 
 function App() {
@@ -33,8 +33,8 @@ function App() {
             <Route index element={<Dashboard />} />
             <Route path="projects" element={<Projects />} />
             <Route path="tasks" element={<Tasks />} />
-            <Route path="profile" element={<ProfilePlaceholder />} />
-            <Route path="settings" element={<SettingsPlaceholder />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="settings" element={<Settings />} />
           </Route>
 
           {/* Fallback route */}
