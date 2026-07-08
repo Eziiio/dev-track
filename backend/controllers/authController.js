@@ -32,21 +32,25 @@ export const registerUser = asyncHandler(async (req, res, next) => {
 export const loginUser = asyncHandler(async (req, res, next) => {
   const { email, password } = req.body;
 
-  // Get user & include password for comparison
-  const user = await User.findOne({ email }).select('+password');
+  console.log("Email entered:", email);
+
+  const user = await User.findOne({ email }).select("+password");
+
+  console.log("User found:", user);
 
   if (!user) {
-    return next(new ErrorResponse('Invalid credentials', 401));
+    return next(new ErrorResponse("Invalid credentials", 401));
   }
 
-  // Check if password matches
   const isMatch = await user.matchPassword(password);
 
+  console.log("Password match:", isMatch);
+
   if (!isMatch) {
-    return next(new ErrorResponse('Invalid credentials', 401));
+    return next(new ErrorResponse("Invalid credentials", 401));
   }
 
-  sendTokenResponse(user, 200, res, 'Login successful');
+  sendTokenResponse(user, 200, res, "Login successful");
 });
 
 // @desc    Log user out / clear cookie
