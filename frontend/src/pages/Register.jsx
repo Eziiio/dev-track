@@ -59,7 +59,7 @@ function Register() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-slate-950 px-4 py-12 transition-colors duration-200">
       <div className="w-full max-w-md space-y-8 bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-100 dark:shadow-none">
-        
+
         {/* Brand Header */}
         <div className="flex flex-col items-center text-center space-y-4">
           <div className="bg-primary-600 text-white p-3 rounded-2xl shadow-lg shadow-primary-500/20">
@@ -92,11 +92,10 @@ function Register() {
                 placeholder="Jane Doe"
                 disabled={isSubmitting}
                 {...register('name')}
-                className={`w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-950 border rounded-xl outline-none transition-all duration-200 text-sm font-medium ${
-                  errors.name
-                    ? 'border-rose-500 focus:ring-2 focus:ring-rose-500/20'
-                    : 'border-slate-200 dark:border-slate-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20'
-                }`}
+                className={`w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-950 text-white border rounded-xl outline-none transition-all duration-200 text-sm font-medium ${errors.name
+                  ? 'border-rose-500 focus:ring-2 focus:ring-rose-500/20'
+                  : 'border-slate-200 dark:border-slate-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20'
+                  }`}
               />
             </div>
             {errors.name && (
@@ -119,11 +118,10 @@ function Register() {
                 placeholder="you@example.com"
                 disabled={isSubmitting}
                 {...register('email')}
-                className={`w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-950 border rounded-xl outline-none transition-all duration-200 text-sm font-medium ${
-                  errors.email
-                    ? 'border-rose-500 focus:ring-2 focus:ring-rose-500/20'
-                    : 'border-slate-200 dark:border-slate-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20'
-                }`}
+                className={`w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-950 text-white border rounded-xl outline-none transition-all duration-200 text-sm font-medium ${errors.email
+                  ? 'border-rose-500 focus:ring-2 focus:ring-rose-500/20'
+                  : 'border-slate-200 dark:border-slate-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20'
+                  }`}
               />
             </div>
             {errors.email && (
@@ -146,11 +144,10 @@ function Register() {
                 placeholder="••••••••"
                 disabled={isSubmitting}
                 {...register('password')}
-                className={`w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-950 border rounded-xl outline-none transition-all duration-200 text-sm font-medium ${
-                  errors.password
-                    ? 'border-rose-500 focus:ring-2 focus:ring-rose-500/20'
-                    : 'border-slate-200 dark:border-slate-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20'
-                }`}
+                className={`w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-950 text-white border rounded-xl outline-none transition-all duration-200 text-sm font-medium ${errors.password
+                  ? 'border-rose-500 focus:ring-2 focus:ring-rose-500/20'
+                  : 'border-slate-200 dark:border-slate-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20'
+                  }`}
               />
             </div>
             {errors.password && (
@@ -168,11 +165,10 @@ function Register() {
                 type="button"
                 disabled={isSubmitting}
                 onClick={() => setValue('role', 'Member')}
-                className={`py-3 px-4 rounded-xl border font-semibold text-sm cursor-pointer transition-all duration-200 flex items-center justify-center gap-2 ${
-                  selectedRole === 'Member'
-                    ? 'border-primary-600 bg-primary-50 dark:bg-primary-950/30 text-primary-600 dark:text-primary-400 shadow-sm shadow-primary-500/5'
-                    : 'border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950 text-slate-500 dark:text-slate-400 hover:bg-slate-100/50 dark:hover:bg-slate-800/50'
-                }`}
+                className={`py-3 px-4 rounded-xl border font-semibold text-sm cursor-pointer transition-all duration-200 flex items-center justify-center gap-2 ${selectedRole === 'Member'
+                  ? 'border-primary-600 bg-primary-50 dark:bg-primary-950/30 text-primary-600 dark:text-primary-400 shadow-sm shadow-primary-500/5'
+                  : 'border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950 text-slate-500 dark:text-slate-400 hover:bg-slate-100/50 dark:hover:bg-slate-800/50'
+                  }`}
               >
                 <User size={16} />
                 Member
@@ -181,11 +177,10 @@ function Register() {
                 type="button"
                 disabled={isSubmitting}
                 onClick={() => setValue('role', 'Admin')}
-                className={`py-3 px-4 rounded-xl border font-semibold text-sm cursor-pointer transition-all duration-200 flex items-center justify-center gap-2 ${
-                  selectedRole === 'Admin'
-                    ? 'border-primary-600 bg-primary-50 dark:bg-primary-950/30 text-primary-600 dark:text-primary-400 shadow-sm shadow-primary-500/5'
-                    : 'border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950 text-slate-500 dark:text-slate-400 hover:bg-slate-100/50 dark:hover:bg-slate-800/50'
-                }`}
+                className={`py-3 px-4 rounded-xl border font-semibold text-sm cursor-pointer transition-all duration-200 flex items-center justify-center gap-2 ${selectedRole === 'Admin'
+                  ? 'border-primary-600 bg-primary-50 dark:bg-primary-950/30 text-primary-600 dark:text-primary-400 shadow-sm shadow-primary-500/5'
+                  : 'border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950 text-slate-500 dark:text-slate-400 hover:bg-slate-100/50 dark:hover:bg-slate-800/50'
+                  }`}
               >
                 <ShieldAlert size={16} />
                 Admin

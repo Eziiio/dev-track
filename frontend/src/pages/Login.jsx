@@ -53,7 +53,7 @@ function Login() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-slate-950 px-4 transition-colors duration-200">
       <div className="w-full max-w-md space-y-8 bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-100 dark:shadow-none">
-        
+
         {/* Brand Header */}
         <div className="flex flex-col items-center text-center space-y-4">
           <div className="bg-primary-600 text-white p-3 rounded-2xl shadow-lg shadow-primary-500/20">
@@ -86,11 +86,10 @@ function Login() {
                 placeholder="you@example.com"
                 disabled={isSubmitting}
                 {...register('email')}
-                className={`w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-950 border rounded-xl outline-none transition-all duration-200 text-sm font-medium ${
-                  errors.email
-                    ? 'border-rose-500 focus:ring-2 focus:ring-rose-500/20'
-                    : 'border-slate-200 dark:border-slate-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20'
-                }`}
+                className={`w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-950 text-white border rounded-xl outline-none transition-all duration-200 text-sm font-medium ${errors.email
+                  ? 'border-rose-500 focus:ring-2 focus:ring-rose-500/20'
+                  : 'border-slate-200 dark:border-slate-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20'
+                  }`}
               />
             </div>
             {errors.email && (
@@ -115,11 +114,10 @@ function Login() {
                 placeholder="••••••••"
                 disabled={isSubmitting}
                 {...register('password')}
-                className={`w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-950 border rounded-xl outline-none transition-all duration-200 text-sm font-medium ${
-                  errors.password
-                    ? 'border-rose-500 focus:ring-2 focus:ring-rose-500/20'
-                    : 'border-slate-200 dark:border-slate-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20'
-                }`}
+                className={`w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-950 text-white border rounded-xl outline-none transition-all duration-200 text-sm font-medium ${errors.password
+                  ? 'border-rose-500 focus:ring-2 focus:ring-rose-500/20'
+                  : 'border-slate-200 dark:border-slate-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20'
+                  }`}
               />
             </div>
             {errors.password && (
