@@ -134,7 +134,7 @@ function ProjectModal({ isOpen, onClose, onSubmitSuccess, project = null }) {
   return (
     <div className="fixed inset-0 bg-slate-900/40 dark:bg-slate-950/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 max-w-lg w-full flex flex-col max-h-[90vh] shadow-xl animate-in fade-in zoom-in-95 duration-200">
-        
+
         {/* Header */}
         <div className="h-16 flex items-center justify-between px-6 border-b border-slate-100 dark:border-slate-800/80 shrink-0">
           <h3 className="font-display text-lg font-bold text-slate-850 dark:text-white">
@@ -150,7 +150,7 @@ function ProjectModal({ isOpen, onClose, onSubmitSuccess, project = null }) {
 
         {/* Form Container */}
         <form onSubmit={handleSubmit(onSubmit)} className="flex-1 overflow-y-auto p-6 space-y-6">
-          
+
           {/* Title */}
           <div className="space-y-2">
             <label className="text-sm font-semibold text-slate-600 dark:text-slate-300" htmlFor="title">
@@ -162,11 +162,10 @@ function ProjectModal({ isOpen, onClose, onSubmitSuccess, project = null }) {
               placeholder="e.g. Website Redesign"
               disabled={isSubmitting}
               {...register('title')}
-              className={`w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 border rounded-xl outline-none transition-all duration-200 text-sm font-medium ${
-                errors.title
-                  ? 'border-rose-500 focus:ring-2 focus:ring-rose-500/20'
-                  : 'border-slate-200 dark:border-slate-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20'
-              }`}
+              className={`w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 text-white border rounded-xl outline-none transition-all duration-200 text-sm font-medium ${errors.title
+                ? 'border-rose-500 focus:ring-2 focus:ring-rose-500/20'
+                : 'border-slate-200 dark:border-slate-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20'
+                }`}
             />
             {errors.title && (
               <p className="text-xs font-semibold text-rose-500 mt-1">{errors.title.message}</p>
@@ -184,11 +183,10 @@ function ProjectModal({ isOpen, onClose, onSubmitSuccess, project = null }) {
               disabled={isSubmitting}
               rows={3}
               {...register('description')}
-              className={`w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 border rounded-xl outline-none transition-all duration-200 text-sm font-medium resize-none ${
-                errors.description
-                  ? 'border-rose-500 focus:ring-2 focus:ring-rose-500/20'
-                  : 'border-slate-200 dark:border-slate-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20'
-              }`}
+              className={`w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 text-white border rounded-xl outline-none transition-all duration-200 text-sm font-medium resize-none ${errors.description
+                ? 'border-rose-500 focus:ring-2 focus:ring-rose-500/20'
+                : 'border-slate-200 dark:border-slate-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20'
+                }`}
             />
             {errors.description && (
               <p className="text-xs font-semibold text-rose-500 mt-1">{errors.description.message}</p>
@@ -215,11 +213,10 @@ function ProjectModal({ isOpen, onClose, onSubmitSuccess, project = null }) {
                   return (
                     <span
                       key={memberId}
-                      className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold border transition-all ${
-                        isCreator
-                          ? 'bg-primary-50 dark:bg-primary-950/20 text-primary-600 dark:text-primary-400 border-primary-200/50 dark:border-primary-800/50'
-                          : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-350 border-slate-200 dark:border-slate-800/80 shadow-sm'
-                      }`}
+                      className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold border transition-all ${isCreator
+                        ? 'bg-primary-50 dark:bg-primary-950/20 text-primary-600 dark:text-primary-400 border-primary-200/50 dark:border-primary-800/50'
+                        : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-350 border-slate-200 dark:border-slate-800/80 shadow-sm'
+                        }`}
                     >
                       {mUser.name}
                       {isCreator && <span className="text-[10px] opacity-75">(Creator)</span>}

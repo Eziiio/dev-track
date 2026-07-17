@@ -22,7 +22,7 @@ function Projects() {
 
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
-  
+
   // Search & Pagination States
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(1);
@@ -115,7 +115,7 @@ function Projects() {
 
   return (
     <div className="space-y-6">
-      
+
       {/* 1. Header controls (Search & Create Action) */}
       <section className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         {/* Search */}
@@ -169,7 +169,7 @@ function Projects() {
             {projects.map((project) => (
               <div
                 key={project._id}
-                className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 transition-all duration-200 flex flex-col justify-between h-[230px]"
+                className="bg-white dark:bg-slate-900 border text-white border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 transition-all duration-200 flex flex-col justify-between h-[230px]"
               >
                 {/* Header card info */}
                 <div className="space-y-2 min-w-0">
