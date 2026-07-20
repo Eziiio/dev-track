@@ -194,7 +194,7 @@ function TaskModal({ isOpen, onClose, onSubmitSuccess, task = null }) {
   return (
     <div className="fixed inset-0 bg-slate-900/40 dark:bg-slate-950/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 max-w-lg w-full flex flex-col max-h-[90vh] shadow-xl animate-in fade-in zoom-in-95 duration-200">
-        
+
         {/* Header */}
         <div className="h-16 flex items-center justify-between px-6 border-b border-slate-100 dark:border-slate-800/80 shrink-0">
           <h3 className="font-display text-lg font-bold text-slate-850 dark:text-white">
@@ -210,7 +210,7 @@ function TaskModal({ isOpen, onClose, onSubmitSuccess, task = null }) {
 
         {/* Form Container */}
         <form onSubmit={handleSubmit(onSubmit)} className="flex-1 overflow-y-auto p-6 space-y-4">
-          
+
           {/* Associated Project */}
           <div className="space-y-2">
             <label className="text-sm font-semibold text-slate-600 dark:text-slate-300" htmlFor="projectId">
@@ -220,11 +220,10 @@ function TaskModal({ isOpen, onClose, onSubmitSuccess, task = null }) {
               id="projectId"
               disabled={isProjectDisabled}
               {...register('projectId')}
-              className={`w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 border rounded-xl outline-none transition-all duration-200 text-sm font-medium ${
-                errors.projectId
-                  ? 'border-rose-500 focus:ring-2 focus:ring-rose-500/20'
-                  : 'border-slate-200 dark:border-slate-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20'
-              } disabled:opacity-60 disabled:cursor-not-allowed`}
+              className={`w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 text-white border rounded-xl outline-none transition-all duration-200 text-sm font-medium ${errors.projectId
+                ? 'border-rose-500 focus:ring-2 focus:ring-rose-500/20'
+                : 'border-slate-200 dark:border-slate-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20'
+                } disabled:opacity-60 disabled:cursor-not-allowed`}
             >
               <option value="">Select a project...</option>
               {projects.map((p) => (
@@ -249,11 +248,10 @@ function TaskModal({ isOpen, onClose, onSubmitSuccess, task = null }) {
               placeholder="e.g. Implement API Gateway"
               disabled={isSubmitting || isTitleDisabled}
               {...register('title')}
-              className={`w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 border rounded-xl outline-none transition-all duration-200 text-sm font-medium ${
-                errors.title
-                  ? 'border-rose-500 focus:ring-2 focus:ring-rose-500/20'
-                  : 'border-slate-200 dark:border-slate-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20'
-              } disabled:opacity-60 disabled:cursor-not-allowed`}
+              className={`w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 text-white border rounded-xl outline-none transition-all duration-200 text-sm font-medium ${errors.title
+                ? 'border-rose-500 focus:ring-2 focus:ring-rose-500/20'
+                : 'border-slate-200 dark:border-slate-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20'
+                } disabled:opacity-60 disabled:cursor-not-allowed`}
             />
             {errors.title && (
               <p className="text-xs font-semibold text-rose-500 mt-1">{errors.title.message}</p>
@@ -271,7 +269,7 @@ function TaskModal({ isOpen, onClose, onSubmitSuccess, task = null }) {
               disabled={isSubmitting || isDescriptionDisabled}
               rows={3}
               {...register('description')}
-              className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200 text-sm font-medium resize-none disabled:opacity-60 disabled:cursor-not-allowed"
+              className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 text-white border border-slate-200 dark:border-slate-800 rounded-xl outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200 text-sm font-medium resize-none disabled:opacity-60 disabled:cursor-not-allowed"
             />
           </div>
 
@@ -286,7 +284,7 @@ function TaskModal({ isOpen, onClose, onSubmitSuccess, task = null }) {
                 id="status"
                 disabled={isSubmitting || isStatusDisabled}
                 {...register('status')}
-                className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200 text-sm font-medium disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 text-white border border-slate-200 dark:border-slate-800 rounded-xl outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200 text-sm font-medium disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 <option value="To Do">To Do</option>
                 <option value="In Progress">In Progress</option>
@@ -304,7 +302,7 @@ function TaskModal({ isOpen, onClose, onSubmitSuccess, task = null }) {
                 id="priority"
                 disabled={isSubmitting || isPriorityDisabled}
                 {...register('priority')}
-                className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200 text-sm font-medium disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 text-white border border-slate-200 dark:border-slate-800 rounded-xl outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200 text-sm font-medium disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 <option value="Low">Low</option>
                 <option value="Medium">Medium</option>
@@ -324,7 +322,7 @@ function TaskModal({ isOpen, onClose, onSubmitSuccess, task = null }) {
                 id="assignedTo"
                 disabled={isSubmitting || isAssigneeDisabled}
                 {...register('assignedTo')}
-                className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200 text-sm font-medium disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 text-white border border-slate-200 dark:border-slate-800 rounded-xl outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200 text-sm font-medium disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 <option value="">Unassigned</option>
                 {projectMembers.map((m) => (
@@ -350,7 +348,7 @@ function TaskModal({ isOpen, onClose, onSubmitSuccess, task = null }) {
                 type="date"
                 disabled={isSubmitting || isDueDateDisabled}
                 {...register('dueDate')}
-                className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200 text-sm font-medium disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 text-white border border-slate-200 dark:border-slate-800 rounded-xl outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200 text-sm font-medium disabled:opacity-60 disabled:cursor-not-allowed"
               />
             </div>
           </div>
@@ -366,7 +364,7 @@ function TaskModal({ isOpen, onClose, onSubmitSuccess, task = null }) {
               placeholder="e.g. bug, frontend, enhancement (comma separated)"
               disabled={isSubmitting || isLabelsDisabled}
               {...register('labels')}
-              className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200 text-sm font-medium disabled:opacity-60 disabled:cursor-not-allowed"
+              className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 text-white border border-slate-200 dark:border-slate-800 rounded-xl outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200 text-sm font-medium disabled:opacity-60 disabled:cursor-not-allowed"
             />
           </div>
 
